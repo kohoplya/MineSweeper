@@ -33,7 +33,7 @@ class MineSweeper:
 
     def closing(self):
         record = Record()
-        record.save(self.currentOpened)
+        record.update_max_opened(self.currentOpened)
 
         if messagebox.askokcancel("closing", "Close the application and exit to the main menu"):
             self.window.destroy()
